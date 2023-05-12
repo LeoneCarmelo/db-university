@@ -36,3 +36,13 @@
 - select *
   from courses
   where year = '1' and period = 'I semestre';  
+
+
+  # 5
+  - show databases;
+  - use university;
+  - show tables;
+  - describe exams;
+  - select *
+    from exams
+    where date = '2020-06-20' and hour(hour) >= 14;
