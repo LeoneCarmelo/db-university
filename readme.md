@@ -46,3 +46,13 @@
   - select *
     from exams
     where date = '2020-06-20' and hour(hour) >= 14;
+
+
+# 6
+  - show databases;
+  - use university;
+  - show tables;
+  - describe degrees;
+  - select *
+    from degrees
+    where name like 'Corso di Laurea Magistrale%';
