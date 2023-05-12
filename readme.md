@@ -64,3 +64,13 @@
   - show tables;
   - describe departments;
   - select count(*) from departments; 
+
+
+# 8
+  - show databases;
+  - use university;
+  - show tables;
+  - describe teachers;
+  - select * 
+    from teachers
+    where phone IS NOT NULL;
