@@ -56,3 +56,11 @@
   - select *
     from degrees
     where name like 'Corso di Laurea Magistrale%';
+
+
+# 7
+  - show databases;
+  - use university;
+  - show tables;
+  - describe departments;
+  - select count(*) from departments; 
