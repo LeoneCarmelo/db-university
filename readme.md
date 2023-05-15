@@ -25,7 +25,7 @@
 - describe students;
 - select *
   from students
-  where year(date_of_birth) < 1993
+  where year(date_of_birth) < 1993 || where timestampdiff(year, `date_of_birth`, curdate()) > 30;
   (3501)
 
 # 4 
@@ -38,14 +38,14 @@
   where year = '1' and period = 'I semestre';  
 
 
-  # 5
-  - show databases;
-  - use university;
-  - show tables;
-  - describe exams;
-  - select *
-    from exams
-    where date = '2020-06-20' and hour(hour) >= 14;
+# 5
+- show databases;
+- use university;
+- show tables;
+- describe exams;
+- select *
+  from exams
+  where date = '2020-06-20' and hour(hour) >= 14;
 
 
 # 6
@@ -73,4 +73,4 @@
   - describe teachers;
   - select * 
     from teachers
-    where phone IS NOT NULL;
+    where phone IS  NULL;
