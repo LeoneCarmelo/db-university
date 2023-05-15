@@ -29,3 +29,19 @@ JOIN `teachers` ON course_teacher.teacher_id = `teachers`.`id`
 JOIN `courses` ON course_teacher.course_id = `courses`.`id`
 WHERE
     teachers.id = 44;
+
+# query 4
+SELECT
+ `students`.`surname` AS `student_surname`,
+ `students`.`name` AS `student_name`,
+ `degrees`.`name` AS `degree_name`,
+ `degrees`.`level` AS `degree_level`,
+ `degrees`.`address` AS `degree_address`,
+ `degrees`.`email` AS `degree_email`,
+ `degrees`.`website` AS `degree_website`,
+ `departments`.`name` as `department_name`
+FROM
+    `students`
+JOIN `degrees` ON students.degree_id = `degrees`.`id`
+JOIN `departments` ON DEGREES.department_id = `departments`.`id`
+ORDER BY `student_surname`;
