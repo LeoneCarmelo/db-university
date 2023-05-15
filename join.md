@@ -15,3 +15,17 @@ FROM
 JOIN `departments` ON DEGREES.department_id = `departments`.`id`
 WHERE
     departments.name = 'Dipartimento di Neuroscienze' AND `degrees`.`name` LIKE 'Corso di Laurea Magistrale%';
+
+# query 3
+SELECT
+    `courses`.`name` AS `course_name`,
+    `teachers`.`id`,
+    `teachers`.`name`,
+    `teachers`.`surname`,
+    `teachers`.`email`
+FROM
+    `course_teacher`
+JOIN `teachers` ON course_teacher.teacher_id = `teachers`.`id`
+JOIN `courses` ON course_teacher.course_id = `courses`.`id`
+WHERE
+    teachers.id = 44;
