@@ -28,3 +28,13 @@ JOIN `courses` ON `exams`.`course_id` = `courses`.`id`
 JOIN `degrees` ON `courses`.`degree_id` = `degrees`.`id`
 GROUP BY
     `courses`.`id`;
+
+# query 4
+SELECT
+    COUNT(`degrees`.id),
+    `departments`.`name` AS `department_name`
+FROM
+    `degrees`
+JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
+GROUP BY
+    `degrees`.`department_id`;
